@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yalin Zhu&#39;s Homepage</title>
+  <subtitle>In God we trust, all others bring data.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-04-04T07:58:02.101Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Yalin Zhu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>recommend websites for machine learning and NLP</title>
+    <link href="http://yoursite.com/2016/04/04/recommend-websites-for-machine-learning-and-NLP/"/>
+    <id>http://yoursite.com/2016/04/04/recommend-websites-for-machine-learning-and-NLP/</id>
+    <published>2016-04-04T07:51:29.000Z</published>
+    <updated>2016-04-04T07:58:02.101Z</updated>
+    
+    <content type="html">&lt;p&gt;Two great chinese public blog about machine learning and NLP is based on Tsinghua Shuimu forum, the blog collect many latest news and geek skills, as well as some good job opportunities for data scientists. The followings are the links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Machine learning: &lt;a href=&quot;https://www.52ml.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.52ml.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NLP: &lt;a href=&quot;http://www.52nlp.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.52nlp.cn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Two great chinese public blog about machine learning and NLP is based on Tsinghua Shuimu forum, the blog collect many latest news and gee
+    
+    </summary>
+    
+      <category term="Data Scinece" scheme="http://yoursite.com/categories/Data-Scinece/"/>
+    
+    
+      <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A new book -- R for Data Science</title>
+    <link href="http://yoursite.com/2016/04/02/A-new-book-for-R-programming/"/>
+    <id>http://yoursite.com/2016/04/02/A-new-book-for-R-programming/</id>
+    <published>2016-04-02T19:39:20.000Z</published>
+    <updated>2016-04-02T19:59:25.836Z</updated>
+    
+    <content type="html">&lt;p&gt;Today I want to introduce this upcoming book for R learners, who wants to be a data analyst or data scientist.&lt;/p&gt;
+&lt;h2 id=&quot;R-for-Data-Science-lt-Click-here&quot;&gt;&lt;a href=&quot;#R-for-Data-Science-lt-Click-here&quot; class=&quot;headerlink&quot; title=&quot;R for Data Science &amp;lt;- Click here&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://r4ds.had.co.nz/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;R for Data Science&lt;/a&gt; &amp;lt;- Click here&lt;/h2&gt;&lt;p&gt;This book is written by Garrett Grolemund and Hadley Wickham, two super stars in R world. I am a big fan of Hadley Wickham, who wrote several popular R packages, such as ggplot2, readr, dplyr, etc. So I found this book, a ongoing book. Hopefully I can update some notes after reading it. The following is the introduction of this book from Google:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What exactly is data science? With this book, you’ll gain a clear understanding of this discipline for discovering natural laws in the structure of data. Along the way, you’ll learn how to use the versatile R programming language for data analysis.&lt;/p&gt;
+&lt;p&gt;Whenever you measure the same thing twice, you get two results—as long as you measure precisely enough. This phenomenon creates uncertainty and opportunity. Author Garrett Grolemund, Master Instructor at RStudio, shows you how data science can help you work with the uncertainty and capture the opportunities. You’ll learn about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Wrangling—how to manipulate datasets to reveal new information&lt;/li&gt;
+&lt;li&gt;Data Visualization—how to create graphs and other visualizations&lt;/li&gt;
+&lt;li&gt;Exploratory Data Analysis—how to find evidence of relationships in your measurements&lt;/li&gt;
+&lt;li&gt;Modelling—how to derive insights and predictions from your data&lt;/li&gt;
+&lt;li&gt;Inference—how to avoid being fooled by data analyses that cannot provide foolproof results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Through the course of the book, you’ll also learn about the statistical worldview, &lt;strong&gt;a way of seeing the world that permits understanding in the face of uncertainty, and simplicity in the face of complexity.&lt;/strong&gt;   &lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Today I want to introduce this upcoming book for R learners, who wants to be a data analyst or data scientist.&lt;/p&gt;
+&lt;h2 id=&quot;R-for-Data-Sci
+    
+    </summary>
+    
+      <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
+    
+      <category term="Hadley Wickham" scheme="http://yoursite.com/tags/Hadley-Wickham/"/>
+    
+      <category term="Garrett Grolemund" scheme="http://yoursite.com/tags/Garrett-Grolemund/"/>
+    
+      <category term="Statistics" scheme="http://yoursite.com/tags/Statistics/"/>
+    
+      <category term="Data Wrangling" scheme="http://yoursite.com/tags/Data-Wrangling/"/>
+    
+      <category term="Data Visualization" scheme="http://yoursite.com/tags/Data-Visualization/"/>
+    
+      <category term="Data Analysis" scheme="http://yoursite.com/tags/Data-Analysis/"/>
+    
+      <category term="Modelling" scheme="http://yoursite.com/tags/Modelling/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Cheat Sheet</title>
+    <link href="http://yoursite.com/2016/04/02/Git-Cheat-Sheet/"/>
+    <id>http://yoursite.com/2016/04/02/Git-Cheat-Sheet/</id>
+    <published>2016-04-02T19:27:41.000Z</published>
+    <updated>2016-04-02T19:31:40.515Z</updated>
+    
+    <content type="html">&lt;p&gt;Looking for a quick reference sheet of Git commands. We’ve got just the documents, available for download in these languages: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;English: &lt;a href=&quot;https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf&lt;/a&gt; &lt;img src=&quot;https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf&quot; alt=&quot;cheat sheet&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Chinese: &lt;a href=&quot;https://training.github.com/kit/downloads/cn/github-git-cheat-sheet.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://training.github.com/kit/downloads/cn/github-git-cheat-sheet.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more languages choices, please refer the Github Training page: &lt;a href=&quot;https://training.github.com/kit/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://training.github.com/kit/&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Looking for a quick reference sheet of Git commands. We’ve got just the documents, available for download in these languages: &lt;/p&gt;
+&lt;ul&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="Programming" scheme="http://yoursite.com/categories/Programming/"/>
+    
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+      <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown syntax references</title>
+    <link href="http://yoursite.com/2016/04/02/Markdown-syntax-reference/"/>
+    <id>http://yoursite.com/2016/04/02/Markdown-syntax-reference/</id>
+    <published>2016-04-02T19:06:09.000Z</published>
+    <updated>2016-04-02T19:36:53.602Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Markdown-Cheatsheet&quot;&gt;&lt;a href=&quot;#Markdown-Cheatsheet&quot; class=&quot;headerlink&quot; title=&quot;Markdown Cheatsheet&quot;&gt;&lt;/a&gt;Markdown Cheatsheet&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;A blog from Gist:&lt;br&gt;&lt;a href=&quot;http://assemble.io/docs/Cheatsheet-Markdown.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://assemble.io/docs/Cheatsheet-Markdown.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Markdown-wiki&quot;&gt;&lt;a href=&quot;#Markdown-wiki&quot; class=&quot;headerlink&quot; title=&quot;Markdown wiki&quot;&gt;&lt;/a&gt;Markdown wiki&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;A wiki made by Adam Pritchard: &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;blockquote&gt;
+&lt;p&gt;This is intended as a quick reference and showcase. For more complete info, see John Gruber’s original spec and the Github-flavored Markdown info page.&lt;br&gt;Note that there is also a Cheatsheet specific to Markdown Here if that’s what you’re looking for. You can also check out more Markdown tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;R-Markdown&quot;&gt;&lt;a href=&quot;#R-Markdown&quot; class=&quot;headerlink&quot; title=&quot;R Markdown&quot;&gt;&lt;/a&gt;R Markdown&lt;/h1&gt;&lt;p&gt;When you know the markdown syntax, as an R user, you have to know R Markdown: A wonderful tool for writer who wants to combine the research results with the article/words.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;R Markdown is an authoring format that enables easy creation of dynamic documents, presentations, and reports from R. It combines the core syntax of markdown (an easy to write plain text format) with embedded R code chunks that are run so their output can be included in the final document. R Markdown documents are fully reproducible (they can be automatically regenerated whenever underlying R code or data changes).&lt;br&gt;R Markdown has many available output formats including HTML, PDF, MS Word, Beamer, HTML5 presentations, Tufte handouts, R package vignettes, and even entire websites.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://shiny.rstudio.com/images/rm-cheatsheet.png&quot; alt=&quot;Rmarkdown Cheat sheet&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Markdown-Cheatsheet&quot;&gt;&lt;a href=&quot;#Markdown-Cheatsheet&quot; class=&quot;headerlink&quot; title=&quot;Markdown Cheatsheet&quot;&gt;&lt;/a&gt;Markdown Cheatsheet&lt;/h1&gt;&lt;ul&gt;
+
+    
+    </summary>
+    
+      <category term="Programming" scheme="http://yoursite.com/categories/Programming/"/>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="Syntax" scheme="http://yoursite.com/tags/Syntax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Command line cheat sheet</title>
+    <link href="http://yoursite.com/2016/04/02/Command-line-cheat-sheet/"/>
+    <id>http://yoursite.com/2016/04/02/Command-line-cheat-sheet/</id>
+    <published>2016-04-02T18:50:21.000Z</published>
+    <updated>2016-04-02T19:07:43.958Z</updated>
+    
+    <content type="html">&lt;p&gt;For many, the command line belongs to long gone days: when computers were controlled by typing mystical commands into a black window; when the mouse possessed no power. But for many use cases, the command line is still absolutely indispensable!&lt;br&gt;Our cheat sheet not only features the most important commands. On the back, it also explains some tips &amp;amp; tricks that make working with the CLI a lot easier. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.git-tower.com/blog/content/posts/32-command-line-cheat-sheet/command-line-cheat-sheet-large01.png&quot; alt=&quot;Cheat sheet 1&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://www.git-tower.com/blog/content/posts/32-command-line-cheat-sheet/command-line-cheat-sheet-large02.png&quot; alt=&quot;Cheat sheet 2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(This cheat sheet is shared from Tobias Günther’s blog: &lt;a href=&quot;https://www.git-tower.com/blog/command-line-cheat-sheet/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.git-tower.com/blog/command-line-cheat-sheet/&lt;/a&gt;)&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;For many, the command line belongs to long gone days: when computers were controlled by typing mystical commands into a black window; whe
+    
+    </summary>
+    
+      <category term="Programming" scheme="http://yoursite.com/categories/Programming/"/>
+    
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+      <category term="Command Line" scheme="http://yoursite.com/tags/Command-Line/"/>
+    
+      <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Free Books on Big Data, Data Science, Data Mining, Machine Learning, Python, R, and more </title>
+    <link href="http://yoursite.com/2016/04/01/Free-Books-on-Big-Data-Data-Science-Data-Mining-Machine-Learning-Python-R-and-more/"/>
+    <id>http://yoursite.com/2016/04/01/Free-Books-on-Big-Data-Data-Science-Data-Mining-Machine-Learning-Python-R-and-more/</id>
+    <published>2016-04-01T23:11:24.000Z</published>
+    <updated>2016-04-01T23:18:32.452Z</updated>
+    
+    <content type="html">&lt;p&gt;In the last post, we list several top latest books. Here is a great collection of eBooks written on the topics of Data Science, Business Analytics, Data Mining, Big Data, Machine Learning, Algorithms, Data Science Tools, and Programming Languages for Data Science. &lt;/p&gt;
+&lt;p&gt;Click &lt;a href=&quot;http://www.kdnuggets.com/2015/09/free-data-science-books.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt; to access.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In the last post, we list several top latest books. Here is a great collection of eBooks written on the topics of Data Science, Business 
+    
+    </summary>
+    
+      <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+    
+      <category term="Data Mining" scheme="http://yoursite.com/tags/Data-Mining/"/>
+    
+      <category term="Big Data" scheme="http://yoursite.com/tags/Big-Data/"/>
+    
+      <category term="Books" scheme="http://yoursite.com/tags/Books/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Top Free Essential Books for the Data Scientist</title>
+    <link href="http://yoursite.com/2016/04/01/Enthusiast/"/>
+    <id>http://yoursite.com/2016/04/01/Enthusiast/</id>
+    <published>2016-04-01T22:02:32.000Z</published>
+    <updated>2016-04-01T23:18:25.323Z</updated>
+    
+    <content type="html">&lt;p&gt;The true data enthusiast has a lot to read about: big data, machine learning, data science, data mining, etc. Besides these technology domains, there are also specific implementations and languages to consider and keep up on: Hadoop, Spark, Python, and R, to name a few, not to mention the myriad tools for automating the various aspects of our professional lives which seem to pop up on a daily basis. There are a lot of topics to keep abreast of. Fortunately (unfortunately?) there is no shortage of books available on all of these subjects.&lt;/p&gt;
+&lt;p&gt;A unique top 10 list of free book recommendations is display as follows. If you’re interested in books on data, this diverse list of top picks should be right up your alley. &lt;/p&gt;
+&lt;h1 id=&quot;Data-Science-amp-Big-Data&quot;&gt;&lt;a href=&quot;#Data-Science-amp-Big-Data&quot; class=&quot;headerlink&quot; title=&quot;Data Science &amp;amp; Big Data&quot;&gt;&lt;/a&gt;&lt;em&gt;Data Science &amp;amp; Big Data&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;The-Art-of-Data-Science&quot;&gt;&lt;a href=&quot;#The-Art-of-Data-Science&quot; class=&quot;headerlink&quot; title=&quot;The Art of Data Science&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leanpub.com/artofdatascience&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Art of Data Science&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;This book describes the process of analyzing data in simple and general terms. The authors have extensive experience both managing data analysts and conducting their own data analyses, and this book is a distillation of their experience in a format that is applicable to both practitioners and managers in data science.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Big-Data-Now-2015-Edition&quot;&gt;&lt;a href=&quot;#Big-Data-Now-2015-Edition&quot; class=&quot;headerlink&quot; title=&quot;Big Data Now: 2015 Edition&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.oreilly.com/data/free/big-data-now-2015-edition.csp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Big Data Now: 2015 Edition&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Now in its fifth year, O’Reilly’s annual Big Data Now report recaps the trends, tools, applications, and forecasts we’ve talked about over the past year. For 2015, we’ve included a collection of blog posts, authored by leading thinkers and experts in the field, that reflect a unique set of themes we’ve identified as gaining significant attention and traction.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Apache-Hadoop-amp-Spark&quot;&gt;&lt;a href=&quot;#Apache-Hadoop-amp-Spark&quot; class=&quot;headerlink&quot; title=&quot;Apache Hadoop &amp;amp; Spark&quot;&gt;&lt;/a&gt;&lt;em&gt;Apache Hadoop &amp;amp; Spark&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;Hadoop-Explained&quot;&gt;&lt;a href=&quot;#Hadoop-Explained&quot; class=&quot;headerlink&quot; title=&quot;Hadoop Explained&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.packtpub.com/packt/free-ebook/hadoop-explained&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hadoop Explained&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Hadoop is one of the most important technologies in a world that is built on data. Find out how it has developed and progressed to address the continuing challenge of Big Data with this insightful guide.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Mastering-Apache-Spark&quot;&gt;&lt;a href=&quot;#Mastering-Apache-Spark&quot; class=&quot;headerlink&quot; title=&quot;Mastering Apache Spark&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.gitbook.com/book/jaceklaskowski/mastering-apache-spark/details&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mastering Apache Spark&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;This collections of notes (what some may rashly call a “book”) serves as the ultimate place of mine to collect all the nuts and bolts of using Apache Spark. The notes aim to help me designing and developing better products with Spark.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Statistics-for-Data-Science&quot;&gt;&lt;a href=&quot;#Statistics-for-Data-Science&quot; class=&quot;headerlink&quot; title=&quot;Statistics for Data Science&quot;&gt;&lt;/a&gt;&lt;em&gt;Statistics for Data Science&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;Think-Stats-Exploratory-Data-Analysis-in-Python&quot;&gt;&lt;a href=&quot;#Think-Stats-Exploratory-Data-Analysis-in-Python&quot; class=&quot;headerlink&quot; title=&quot;Think Stats: Exploratory Data Analysis in Python&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.greenteapress.com/thinkstats2/html/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Think Stats: Exploratory Data Analysis in Python&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Think Stats emphasizes simple techniques you can use to explore real data sets and answer interesting questions. The book presents a case study using data from the National Institutes of Health. Readers are encouraged to work on a project with real datasets.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Machine-Statistical-Learning-amp-Deep-Learning&quot;&gt;&lt;a href=&quot;#Machine-Statistical-Learning-amp-Deep-Learning&quot; class=&quot;headerlink&quot; title=&quot;Machine (Statistical) Learning &amp;amp; Deep Learning&quot;&gt;&lt;/a&gt;&lt;em&gt;Machine (Statistical) Learning &amp;amp; Deep Learning&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;An-Introduction-to-Statistical-Learning-with-Applications-in-R&quot;&gt;&lt;a href=&quot;#An-Introduction-to-Statistical-Learning-with-Applications-in-R&quot; class=&quot;headerlink&quot; title=&quot;An Introduction to Statistical Learning with Applications in R&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www-bcf.usc.edu/~gareth/ISL/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;An Introduction to Statistical Learning with Applications in R&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;This book provides an introduction to statistical learning methods. It is aimed for upper level undergraduate students, masters students and Ph.D. students in the non-mathematical sciences. The book also contains a number of R labs with detailed explanations on how to implement the various methods in real life settings, and should be a valuable resource for a practicing data scientist.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Elements-of-Statistical-Learning&quot;&gt;&lt;a href=&quot;#Elements-of-Statistical-Learning&quot; class=&quot;headerlink&quot; title=&quot;Elements of Statistical Learning&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://web.stanford.edu/~hastie/ElemStatLearn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Elements of Statistical Learning&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;The good news is, this is pretty much the most important book you are going to read in the space. It will tie everything together for you in a way that I haven’t seen any other book attempt.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Neural-Networks-and-Deep-Learning&quot;&gt;&lt;a href=&quot;#Neural-Networks-and-Deep-Learning&quot; class=&quot;headerlink&quot; title=&quot;Neural Networks and Deep Learning&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://neuralnetworksanddeeplearning.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Neural Networks and Deep Learning&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Neural Networks and Deep Learning is a free online book. The book will teach you about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neural networks, a beautiful biologically-inspired programming paradigm which enables a computer to learn from observational data.&lt;/li&gt;
+&lt;li&gt;Deep learning, a powerful set of techniques for learning in neural networks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Deep-Learning&quot;&gt;&lt;a href=&quot;#Deep-Learning&quot; class=&quot;headerlink&quot; title=&quot;Deep Learning&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.deeplearningbook.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deep Learning&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;The in-preparation, likely to-be definitive deep learning book of the near future, written by Ian Goodfellow, Yoshua Bengio, and Aaron Courville. The development version is updated monthly, and will be freely available until publication.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Data-Mining-amp-SQL&quot;&gt;&lt;a href=&quot;#Data-Mining-amp-SQL&quot; class=&quot;headerlink&quot; title=&quot;Data Mining &amp;amp; SQL&quot;&gt;&lt;/a&gt;&lt;em&gt;Data Mining &amp;amp; SQL&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;Data-Mining-Concepts-and-Techniques-Third-Edition&quot;&gt;&lt;a href=&quot;#Data-Mining-Concepts-and-Techniques-Third-Edition&quot; class=&quot;headerlink&quot; title=&quot;Data Mining: Concepts and Techniques, Third Edition&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cse.hcmut.edu.vn/~chauvtn/data_mining/Texts/[1]%20Data%20Mining%20-%20Concepts%20and%20Techniques%20%283rd%20Ed%29.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Data Mining: Concepts and Techniques, Third Edition&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Data Mining is a comprehensive overview of the field, and I think it is best for a graduate class in data mining, or perhaps as a reference book. The book’s focus is on technique (i.e., how to analyze data, including preparation), and it addresses all the major topics in the field including data storage and pre-processing. However, the book is really about classification methods, and the 2 chapters on cluster analysis are particularly strong and thorough.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Mining-of-Massive-Datasets&quot;&gt;&lt;a href=&quot;#Mining-of-Massive-Datasets&quot; class=&quot;headerlink&quot; title=&quot;Mining of Massive Datasets&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mining of Massive Datasets&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;The book, like the course, is designed at the undergraduate computer science level with no formal prerequisites. To support deeper explorations, most of the chapters are supplemented with further reading references.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Learning-SQL-Second-Edition&quot;&gt;&lt;a href=&quot;#Learning-SQL-Second-Edition&quot; class=&quot;headerlink&quot; title=&quot;Learning SQL, Second Edition&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.r-5.org/files/books/computers/languages/sql/mysql/Alan_Beaulieu-Learning_SQL-EN.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Learning SQL, Second Edition&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;If you’re writing any type of database driven code and you think that you don’t need to understand SQL, read this book. You do need to understand it, and this book teaches it very well.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Learn-SQL-The-Hard-Way&quot;&gt;&lt;a href=&quot;#Learn-SQL-The-Hard-Way&quot; class=&quot;headerlink&quot; title=&quot; Learn SQL The Hard Way&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://sql.learncodethehardway.org/book/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Learn SQL The Hard Way&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;This book will teach you the 80% of SQL you probably need to use it effectively, and will mix in concepts in data modeling at the same time. If you’ve been fumbling around building web, desktop, or mobile applications because you don’t know SQL, then this book is for you. It is written for people with no prior database, programming, or SQL knowledge, but knowing at least one programming language will help.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The true data enthusiast has a lot to read about: big data, machine learning, data science, data mining, etc. Besides these technology do
+    
+    </summary>
+    
+      <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
+    
+    
+      <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+    
+      <category term="Deep Learning" scheme="http://yoursite.com/tags/Deep-Learning/"/>
+    
+      <category term="Data Mining" scheme="http://yoursite.com/tags/Data-Mining/"/>
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+      <category term="Big Data" scheme="http://yoursite.com/tags/Big-Data/"/>
+    
+      <category term="Books" scheme="http://yoursite.com/tags/Books/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Start writing!</title>
+    <link href="http://yoursite.com/2016/04/01/Start-writing/"/>
+    <id>http://yoursite.com/2016/04/01/Start-writing/</id>
+    <published>2016-04-01T06:58:35.000Z</published>
+    <updated>2016-04-02T19:38:18.971Z</updated>
+    
+    <content type="html">&lt;p&gt;A very good specialization online course can help us to improve job interview and resume writing skill: &lt;a href=&quot;https://www.coursera.org/specializations/english-interview-resume&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Master the English Job Search Process&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A very good specialization online course can help us to improve job interview and resume writing skill: &lt;a href=&quot;https://www.coursera.org
+    
+    </summary>
+    
+      <category term="Career" scheme="http://yoursite.com/categories/Career/"/>
+    
+    
+      <category term="Writing" scheme="http://yoursite.com/tags/Writing/"/>
+    
+      <category term="Resume" scheme="http://yoursite.com/tags/Resume/"/>
+    
+      <category term="Interview" scheme="http://yoursite.com/tags/Interview/"/>
+    
+      <category term="Job Hunting" scheme="http://yoursite.com/tags/Job-Hunting/"/>
+    
+      <category term="Online Course" scheme="http://yoursite.com/tags/Online-Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Guys!</title>
+    <link href="http://yoursite.com/2016/03/30/hello-world/"/>
+    <id>http://yoursite.com/2016/03/30/hello-world/</id>
+    <published>2016-03-30T23:10:11.253Z</published>
+    <updated>2016-04-01T06:47:56.389Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://yalin.ml/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;my homepage&lt;/a&gt;! This is my first post. Check &lt;a href=&quot;http://allenzhuaz.github.io/about/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;About Me&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask the author of Hexo on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://yalin.ml/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;my homepage&lt;/a&gt;! This is my first post. Check &lt;a href=&quot;http://allen
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
