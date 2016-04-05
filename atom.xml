@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-04T07:58:02.101Z</updated>
+  <updated>2016-04-04T19:13:22.389Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>interview technique</title>
+    <link href="http://yoursite.com/2016/04/04/interview-technique/"/>
+    <id>http://yoursite.com/2016/04/04/interview-technique/</id>
+    <published>2016-04-04T19:13:22.000Z</published>
+    <updated>2016-04-04T19:13:22.389Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>recommend websites for machine learning and NLP</title>
@@ -79,9 +95,9 @@
       <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
     
     
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
-    
       <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
       <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
     
@@ -170,8 +186,6 @@
       <category term="Programming" scheme="http://yoursite.com/categories/Programming/"/>
     
     
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
-    
       <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
     
       <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
@@ -179,6 +193,8 @@
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
       <category term="Syntax" scheme="http://yoursite.com/tags/Syntax/"/>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
   </entry>
   
@@ -233,9 +249,9 @@
       <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
     
     
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
-    
       <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
       <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
     
