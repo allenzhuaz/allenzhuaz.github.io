@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-04T19:13:22.389Z</updated>
+  <updated>2016-04-07T21:49:03.068Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Note for &#39;Analysis of Discrete Data&#39; (1)</title>
+    <link href="http://yoursite.com/2016/04/07/Note-for-Analysis-of-Discrete-Data/"/>
+    <id>http://yoursite.com/2016/04/07/Note-for-Analysis-of-Discrete-Data/</id>
+    <published>2016-04-07T21:30:58.000Z</published>
+    <updated>2016-04-07T21:49:03.068Z</updated>
+    
+    <content type="html">&lt;p&gt;First of all, this note is based on the online course ‘Analysis of Discrete Data’: &lt;a href=&quot;https://onlinecourses.science.psu.edu/stat504/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://onlinecourses.science.psu.edu/stat504/&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;First of all, this note is based on the online course ‘Analysis of Discrete Data’: &lt;a href=&quot;https://onlinecourses.science.psu.edu/stat504
+    
+    </summary>
+    
+      <category term="Statistical Theory" scheme="http://yoursite.com/categories/Statistical-Theory/"/>
+    
+    
+      <category term="Statistics" scheme="http://yoursite.com/tags/Statistics/"/>
+    
+      <category term="Discrete Data" scheme="http://yoursite.com/tags/Discrete-Data/"/>
+    
+      <category term="Theory" scheme="http://yoursite.com/tags/Theory/"/>
+    
+  </entry>
   
   <entry>
     <title>interview technique</title>
@@ -95,9 +122,9 @@
       <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
     
     
-      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
-    
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
     
       <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
     
@@ -186,6 +213,8 @@
       <category term="Programming" scheme="http://yoursite.com/categories/Programming/"/>
     
     
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
       <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
     
       <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
@@ -193,8 +222,6 @@
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
       <category term="Syntax" scheme="http://yoursite.com/tags/Syntax/"/>
-    
-      <category term="R" scheme="http://yoursite.com/tags/R/"/>
     
   </entry>
   
@@ -223,9 +250,9 @@
     
       <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
-      <category term="Command Line" scheme="http://yoursite.com/tags/Command-Line/"/>
-    
       <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
+    
+      <category term="Command Line" scheme="http://yoursite.com/tags/Command-Line/"/>
     
   </entry>
   
@@ -249,9 +276,9 @@
       <category term="Data Science" scheme="http://yoursite.com/categories/Data-Science/"/>
     
     
-      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
-    
       <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+      <category term="Programming" scheme="http://yoursite.com/tags/Programming/"/>
     
       <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
     
