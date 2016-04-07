@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-07T21:49:03.068Z</updated>
+  <updated>2016-04-07T22:29:46.181Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,357 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Frequency tests</title>
+    <link href="http://yoursite.com/2016/04/07/Frequency-test/"/>
+    <id>http://yoursite.com/2016/04/07/Frequency-test/</id>
+    <published>2016-04-07T22:10:28.000Z</published>
+    <updated>2016-04-07T22:29:46.181Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;Solution
+    Tests of goodness-of-fit (expected frequency)
+        Chi-square test
+        Exact binomial test
+    Tests of independence (comparing groups)
+        Chi-square test
+        Fisher�s exact test
+        Cochran-Mantel-Haenszel test
+    McNemar�s test
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;Problem-1&quot;&gt;&lt;a href=&quot;#Problem-1&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;You have categorical data and want test whether the frequency distribution of values differs from an expected frequency, or if the distribution differs between groups.&lt;/p&gt;
+&lt;h1 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;There are two general questions that frequency tests address:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Does the frequency distribution differ from an expected, or theoretical, distribution (e.g., expect 50% yes, 50% no)? (Goodness-of-fit test)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Does the frequency distribution differ between two or more groups? (Independence test)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;Of the statistical tests commonly used to address these questions, there are exact tests and approximate tests.&lt;br&gt;      Expected distribution     Comparing groups&lt;br&gt;Exact     Exact binomial     Fisher�s exact&lt;br&gt;Approximate     Chi-square goodness of fit     Chi-square test of independence&lt;/p&gt;
+&lt;p&gt;Note: The exact binomial test can only be used on one variable that has two levels. Fisher�s exact test can only be used with two-dimensional contingency tables (for example, it can be used when there is one independent variable and one dependent variable, but not when there are 2 IVs and 1 DV).&lt;/p&gt;
+&lt;p&gt;To test for paired or within-subjects effects, McNemar�s test can be used. To use it, there must be one IV with two levels, and one DV with two levels.&lt;/p&gt;
+&lt;p&gt;To test for the independence of two variables with repeated measurements, the Cochran-Mantel-Haenszel test can be used.&lt;/p&gt;
+&lt;p&gt;Suppose this is your data, where each row represents one case:&lt;/p&gt;
+&lt;p&gt;data &amp;lt;- read.table(header=TRUE, text=’&lt;br&gt; condition result&lt;br&gt;   control      0&lt;br&gt;   control      0&lt;br&gt;   control      0&lt;br&gt;   control      0&lt;br&gt; treatment      1&lt;br&gt;   control      0&lt;br&gt;   control      0&lt;br&gt; treatment      0&lt;br&gt; treatment      1&lt;br&gt;   control      1&lt;br&gt; treatment      1&lt;br&gt; treatment      1&lt;br&gt; treatment      1&lt;br&gt; treatment      1&lt;br&gt; treatment      0&lt;br&gt;   control      0&lt;br&gt;   control      1&lt;br&gt;   control      0&lt;br&gt;   control      1&lt;br&gt; treatment      0&lt;br&gt; treatment      1&lt;br&gt; treatment      0&lt;br&gt; treatment      0&lt;br&gt;   control      0&lt;br&gt; treatment      1&lt;br&gt;   control      0&lt;br&gt;   control      0&lt;br&gt; treatment      1&lt;br&gt; treatment      0&lt;br&gt; treatment      1&lt;br&gt;‘)&lt;/p&gt;
+&lt;p&gt;Instead of a data frame of cases, your data might be stored as a data frame of counts, or as a contingency table. For the analyses here, your data must be in a contingency table. See this page for more information.&lt;br&gt;Tests of goodness-of-fit (expected frequency)&lt;br&gt;Chi-square test&lt;/p&gt;
+&lt;p&gt;To test the hypothesis that the two values in the result column (ignoring condition) are equally likely (50%-50%) in the population:&lt;/p&gt;
+&lt;h1 id=&quot;Create-contingency-table-for-result-which-contains-values-0-and-1&quot;&gt;&lt;a href=&quot;#Create-contingency-table-for-result-which-contains-values-0-and-1&quot; class=&quot;headerlink&quot; title=&quot;Create contingency table for result, which contains values 0 and 1&quot;&gt;&lt;/a&gt;Create contingency table for result, which contains values 0 and 1&lt;/h1&gt;&lt;h1 id=&quot;The-column-names-are-“0”-and-“1”-they’re-not-actually-values-in-the-table&quot;&gt;&lt;a href=&quot;#The-column-names-are-“0”-and-“1”-they’re-not-actually-values-in-the-table&quot; class=&quot;headerlink&quot; title=&quot;The column names are “0” and “1” (they’re not actually values in the table)&quot;&gt;&lt;/a&gt;The column names are “0” and “1” (they’re not actually values in the table)&lt;/h1&gt;&lt;p&gt;ct &amp;lt;- table(data$result)&lt;br&gt;ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0  1 &lt;/p&gt;
+&lt;p&gt;#&amp;gt; 17 13&lt;/p&gt;
+&lt;h1 id=&quot;An-alternative-is-to-manually-create-the-table&quot;&gt;&lt;a href=&quot;#An-alternative-is-to-manually-create-the-table&quot; class=&quot;headerlink&quot; title=&quot;An alternative is to manually create the table&quot;&gt;&lt;/a&gt;An alternative is to manually create the table&lt;/h1&gt;&lt;p&gt;#ct &amp;lt;- matrix(c(17,13), ncol=2)&lt;/p&gt;
+&lt;p&gt;#colnames(ct1) &amp;lt;- c(“0”, “1”)&lt;/p&gt;
+&lt;h1 id=&quot;Perform-Chi-square-test&quot;&gt;&lt;a href=&quot;#Perform-Chi-square-test&quot; class=&quot;headerlink&quot; title=&quot;Perform Chi-square test&quot;&gt;&lt;/a&gt;Perform Chi-square test&lt;/h1&gt;&lt;p&gt;chisq.test(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Chi-squared test for given probabilities&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; X-squared = 0.5333, df = 1, p-value = 0.4652&lt;/p&gt;
+&lt;p&gt;To test the sample with different expected frequencies (in this case 0.75 and 0.25):&lt;/p&gt;
+&lt;h1 id=&quot;Probability-table-must-sum-to-1&quot;&gt;&lt;a href=&quot;#Probability-table-must-sum-to-1&quot; class=&quot;headerlink&quot; title=&quot;Probability table - must sum to 1&quot;&gt;&lt;/a&gt;Probability table - must sum to 1&lt;/h1&gt;&lt;p&gt;pt &amp;lt;- c(.75, .25)&lt;br&gt;chisq.test(ct, p=pt)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Chi-squared test for given probabilities&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; X-squared = 5.3778, df = 1, p-value = 0.02039&lt;/p&gt;
+&lt;p&gt;If you want to extract information out of the test result, you can save the result into a variable, examine the variable with str(), and pull out the parts you want. For example:&lt;/p&gt;
+&lt;p&gt;chi_res &amp;lt;- chisq.test(ct, p=pt)&lt;/p&gt;
+&lt;h1 id=&quot;View-all-the-parts-that-can-be-extracted&quot;&gt;&lt;a href=&quot;#View-all-the-parts-that-can-be-extracted&quot; class=&quot;headerlink&quot; title=&quot;View all the parts that can be extracted&quot;&gt;&lt;/a&gt;View all the parts that can be extracted&lt;/h1&gt;&lt;p&gt;str(chi_res)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; List of 9&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ statistic: Named num 5.38&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “X-squared”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ parameter: Named num 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “df”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ p.value  : num 0.0204&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ method   : chr “Chi-squared test for given probabilities”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ data.name: chr “ct”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ observed : ‘table’ int [1:2(1d)] 17 13&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “dimnames”)=List of 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   .. ..$ : chr [1:2] “0” “1”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ expected : Named num [1:2] 22.5 7.5&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr [1:2] “0” “1”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ residuals: table [1:2(1d)] -1.16 2.01&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “dimnames”)=List of 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   .. ..$ : chr [1:2] “0” “1”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ stdres   : table [1:2(1d)] -2.32 2.32&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “dimnames”)=List of 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   .. ..$ : chr [1:2] “0” “1”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  - attr(*, “class”)= chr “htest”&lt;/p&gt;
+&lt;h1 id=&quot;Get-the-Chi-squared-value&quot;&gt;&lt;a href=&quot;#Get-the-Chi-squared-value&quot; class=&quot;headerlink&quot; title=&quot;Get the Chi-squared value&quot;&gt;&lt;/a&gt;Get the Chi-squared value&lt;/h1&gt;&lt;p&gt;chi_res$statistic&lt;/p&gt;
+&lt;p&gt;#&amp;gt; X-squared &lt;/p&gt;
+&lt;p&gt;#&amp;gt;  5.377778&lt;/p&gt;
+&lt;h1 id=&quot;Get-the-p-value&quot;&gt;&lt;a href=&quot;#Get-the-p-value&quot; class=&quot;headerlink&quot; title=&quot;Get the p-value&quot;&gt;&lt;/a&gt;Get the p-value&lt;/h1&gt;&lt;p&gt;chi_res$p.value&lt;/p&gt;
+&lt;p&gt;#&amp;gt; [1] 0.02039484&lt;/p&gt;
+&lt;p&gt;Exact binomial test&lt;/p&gt;
+&lt;p&gt;The exact binomial test is used only with data where there is one variable with two possible values.&lt;/p&gt;
+&lt;p&gt;ct &amp;lt;- table(data$result)&lt;br&gt;ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0  1 &lt;/p&gt;
+&lt;p&gt;#&amp;gt; 17 13&lt;/p&gt;
+&lt;p&gt;binom.test(ct, p=0.5)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Exact binomial test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; number of successes = 17, number of trials = 30, p-value = 0.5847&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true probability of success is not equal to 0.5&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0.3742735 0.7453925&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; probability of success &lt;/p&gt;
+&lt;p&gt;#&amp;gt;              0.5666667&lt;/p&gt;
+&lt;h1 id=&quot;Using-expected-probability-of-75-–-notice-that-1-is-in-the-second-column-of&quot;&gt;&lt;a href=&quot;#Using-expected-probability-of-75-–-notice-that-1-is-in-the-second-column-of&quot; class=&quot;headerlink&quot; title=&quot;Using expected probability of 75% – notice that 1 is in the second column of&quot;&gt;&lt;/a&gt;Using expected probability of 75% – notice that 1 is in the second column of&lt;/h1&gt;&lt;h1 id=&quot;the-table-so-need-to-use-p-25&quot;&gt;&lt;a href=&quot;#the-table-so-need-to-use-p-25&quot; class=&quot;headerlink&quot; title=&quot;the table so need to use p=.25&quot;&gt;&lt;/a&gt;the table so need to use p=.25&lt;/h1&gt;&lt;p&gt;binom.test(ct, p=0.25)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Exact binomial test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; number of successes = 17, number of trials = 30, p-value = 0.0002157&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true probability of success is not equal to 0.25&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0.3742735 0.7453925&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; probability of success &lt;/p&gt;
+&lt;p&gt;#&amp;gt;              0.5666667&lt;/p&gt;
+&lt;p&gt;If you want to extract information out of the test result, you can save the result into a variable, examine the variable with str(), and pull out the parts you want. For example:&lt;/p&gt;
+&lt;p&gt;bin_res &amp;lt;- binom.test(ct, p=0.25)&lt;/p&gt;
+&lt;h1 id=&quot;View-all-the-parts-that-can-be-extracted-1&quot;&gt;&lt;a href=&quot;#View-all-the-parts-that-can-be-extracted-1&quot; class=&quot;headerlink&quot; title=&quot;View all the parts that can be extracted&quot;&gt;&lt;/a&gt;View all the parts that can be extracted&lt;/h1&gt;&lt;p&gt;str(bin_res)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; List of 9&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ statistic  : Named num 17&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “number of successes”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ parameter  : Named num 30&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “number of trials”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ p.value    : Named num 0.000216&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “0”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ conf.int   : atomic [1:2] 0.374 0.745&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “conf.level”)= num 0.95&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ estimate   : Named num 0.567&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “probability of success”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ null.value : Named num 0.25&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   ..- attr(*, “names”)= chr “probability of success”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ alternative: chr “two.sided”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ method     : chr “Exact binomial test”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  $ data.name  : chr “ct”&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  - attr(*, “class”)= chr “htest”&lt;/p&gt;
+&lt;h1 id=&quot;Get-the-p-value-1&quot;&gt;&lt;a href=&quot;#Get-the-p-value-1&quot; class=&quot;headerlink&quot; title=&quot;Get the p-value&quot;&gt;&lt;/a&gt;Get the p-value&lt;/h1&gt;&lt;p&gt;bin_res$p.value&lt;/p&gt;
+&lt;p&gt;#&amp;gt;            0 &lt;/p&gt;
+&lt;p&gt;#&amp;gt; 0.0002156938&lt;/p&gt;
+&lt;h1 id=&quot;Get-the-95-confidence-interval&quot;&gt;&lt;a href=&quot;#Get-the-95-confidence-interval&quot; class=&quot;headerlink&quot; title=&quot;Get the 95% confidence interval&quot;&gt;&lt;/a&gt;Get the 95% confidence interval&lt;/h1&gt;&lt;p&gt;bin_res$conf.int&lt;/p&gt;
+&lt;p&gt;#&amp;gt; [1] 0.3742735 0.7453925&lt;/p&gt;
+&lt;p&gt;#&amp;gt; attr(,”conf.level”)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; [1] 0.95&lt;/p&gt;
+&lt;p&gt;Tests of independence (comparing groups)&lt;br&gt;Chi-square test&lt;/p&gt;
+&lt;p&gt;To test whether the control and treatment conditions result in different frequencies, use a 2D contingency table.&lt;/p&gt;
+&lt;p&gt;ct &amp;lt;- table(data$condition, data$result)&lt;br&gt;ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt;            &lt;/p&gt;
+&lt;p&gt;#&amp;gt;              0  1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   control   11  3&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   treatment  6 10&lt;/p&gt;
+&lt;p&gt;chisq.test(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Pearson’s Chi-squared test with Yates’ continuity correction&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; X-squared = 3.593, df = 1, p-value = 0.05802&lt;/p&gt;
+&lt;p&gt;chisq.test(ct, correct=FALSE)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Pearson’s Chi-squared test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; X-squared = 5.1293, df = 1, p-value = 0.02353&lt;/p&gt;
+&lt;p&gt;For 2x2 tables, it uses Yates�s continuity correction by default. This test is more conservative for small sample sizes.&lt;br&gt;The flag correct=FALSE, tells it to use Pearson�s chi-square test without the correction.&lt;br&gt;Fisher�s exact test&lt;/p&gt;
+&lt;p&gt;For small sample sizes, Fisher�s exact test may be more appropriate. It is typically used for 2x2 tables with relatively small sample sizes because it is computationally intensive for more complicated (e.g., 2x3) tables, and those with larger sample sizes. However, the implementation in R seems to handle larger cases without trouble.&lt;/p&gt;
+&lt;p&gt;ct &amp;lt;- table(data$condition, data$result)&lt;br&gt;ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt;            &lt;/p&gt;
+&lt;p&gt;#&amp;gt;              0  1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   control   11  3&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   treatment  6 10&lt;/p&gt;
+&lt;p&gt;fisher.test(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Fisher’s Exact Test for Count Data&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; p-value = 0.03293&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true odds ratio is not equal to 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   0.966861 45.555016&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; odds ratio &lt;/p&gt;
+&lt;p&gt;#&amp;gt;   5.714369&lt;/p&gt;
+&lt;p&gt;Cochran-Mantel-Haenszel test&lt;/p&gt;
+&lt;p&gt;The Cochran-Mantel-Haenszel test (or Mantel-Haenszel test) is used for testing the independence of two dichotomous variables with repeated measurements. It is most commonly used with 2x2xK tables, where K is the number of measurement conditions. For example, you may want to know whether a treatment (C vs. D) affects the likelihood of recovery (yes or no). Suppose, though, that the treatments were administered at three different times of day, morning, afternoon, and night � and that you want your test to control for this. The CMH test would then operate on a 2x2x3 contingency table, where the third variable is the one you wish to control for.&lt;/p&gt;
+&lt;p&gt;The implementation of the CMH test in R can handle dimensions greater than 2x2xK. For example, you could use it for a 3x3xK contingency table.&lt;/p&gt;
+&lt;p&gt;In the following example (borrowed from McDonald�s Handbook of Biological Statistics), there are three variables: Location, Allele, and Habitat. The question is whether Allele (94 or non-94) and Habitat (marine or estuarine) are independent, when location is controlled for.&lt;/p&gt;
+&lt;p&gt;fish &amp;lt;- read.table(header=TRUE, text=’&lt;br&gt;  Location Allele   Habitat Count&lt;br&gt; tillamook     94    marine    56&lt;br&gt; tillamook     94 estuarine    69&lt;br&gt; tillamook non-94    marine    40&lt;br&gt; tillamook non-94 estuarine    77&lt;br&gt;   yaquina     94    marine    61&lt;br&gt;   yaquina     94 estuarine   257&lt;br&gt;   yaquina non-94    marine    57&lt;br&gt;   yaquina non-94 estuarine   301&lt;br&gt;     alsea     94    marine    73&lt;br&gt;     alsea     94 estuarine    65&lt;br&gt;     alsea non-94    marine    71&lt;br&gt;     alsea non-94 estuarine    79&lt;br&gt;    umpqua     94    marine    71&lt;br&gt;    umpqua     94 estuarine    48&lt;br&gt;    umpqua non-94    marine    55&lt;br&gt;    umpqua non-94 estuarine    48&lt;br&gt;‘)&lt;/p&gt;
+&lt;p&gt;Note that the data above is entered as a data frame of counts, instead of a data frame of cases as in previous examples. Instead of using table() to convert it to a contingency table, use xtabs() instead. For more information, see this page.&lt;/p&gt;
+&lt;h1 id=&quot;Make-a-3D-contingency-table-where-the-last-variable-Location-is-the-one-to&quot;&gt;&lt;a href=&quot;#Make-a-3D-contingency-table-where-the-last-variable-Location-is-the-one-to&quot; class=&quot;headerlink&quot; title=&quot;Make a 3D contingency table, where the last variable, Location, is the one to&quot;&gt;&lt;/a&gt;Make a 3D contingency table, where the last variable, Location, is the one to&lt;/h1&gt;&lt;h1 id=&quot;control-for-If-you-use-table-for-case-data-the-last-variable-is-also-the&quot;&gt;&lt;a href=&quot;#control-for-If-you-use-table-for-case-data-the-last-variable-is-also-the&quot; class=&quot;headerlink&quot; title=&quot;control for. If you use table() for case data, the last variable is also the&quot;&gt;&lt;/a&gt;control for. If you use table() for case data, the last variable is also the&lt;/h1&gt;&lt;h1 id=&quot;one-to-control-for&quot;&gt;&lt;a href=&quot;#one-to-control-for&quot; class=&quot;headerlink&quot; title=&quot;one to control for.&quot;&gt;&lt;/a&gt;one to control for.&lt;/h1&gt;&lt;p&gt;ct &amp;lt;- xtabs(Count ~ Allele + Habitat + Location, data=fish)&lt;br&gt;ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; , , Location = alsea&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;         Habitat&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Allele   estuarine marine&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   94            65     73&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   non-94        79     71&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; , , Location = tillamook&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;         Habitat&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Allele   estuarine marine&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   94            69     56&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   non-94        77     40&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; , , Location = umpqua&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;         Habitat&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Allele   estuarine marine&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   94            48     71&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   non-94        48     55&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; , , Location = yaquina&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;         Habitat&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Allele   estuarine marine&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   94           257     61&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   non-94       301     57&lt;/p&gt;
+&lt;h1 id=&quot;This-prints-ct-in-a-“flat”-format&quot;&gt;&lt;a href=&quot;#This-prints-ct-in-a-“flat”-format&quot; class=&quot;headerlink&quot; title=&quot;This prints ct in a “flat” format&quot;&gt;&lt;/a&gt;This prints ct in a “flat” format&lt;/h1&gt;&lt;p&gt;ftable(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt;                  Location alsea tillamook umpqua yaquina&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Allele Habitat                                          &lt;/p&gt;
+&lt;p&gt;#&amp;gt; 94     estuarine             65        69     48     257&lt;/p&gt;
+&lt;p&gt;#&amp;gt;        marine                73        56     71      61&lt;/p&gt;
+&lt;p&gt;#&amp;gt; non-94 estuarine             79        77     48     301&lt;/p&gt;
+&lt;p&gt;#&amp;gt;        marine                71        40     55      57&lt;/p&gt;
+&lt;h1 id=&quot;Print-with-different-arrangement-of-variables&quot;&gt;&lt;a href=&quot;#Print-with-different-arrangement-of-variables&quot; class=&quot;headerlink&quot; title=&quot;Print with different arrangement of variables&quot;&gt;&lt;/a&gt;Print with different arrangement of variables&lt;/h1&gt;&lt;p&gt;ftable(ct, row.vars=c(“Location”,”Allele”), col.vars=”Habitat”)&lt;/p&gt;
+&lt;p&gt;#&amp;gt;                  Habitat estuarine marine&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Location  Allele                         &lt;/p&gt;
+&lt;p&gt;#&amp;gt; alsea     94                    65     73&lt;/p&gt;
+&lt;p&gt;#&amp;gt;           non-94                79     71&lt;/p&gt;
+&lt;p&gt;#&amp;gt; tillamook 94                    69     56&lt;/p&gt;
+&lt;p&gt;#&amp;gt;           non-94                77     40&lt;/p&gt;
+&lt;p&gt;#&amp;gt; umpqua    94                    48     71&lt;/p&gt;
+&lt;p&gt;#&amp;gt;           non-94                48     55&lt;/p&gt;
+&lt;p&gt;#&amp;gt; yaquina   94                   257     61&lt;/p&gt;
+&lt;p&gt;#&amp;gt;           non-94               301     57&lt;/p&gt;
+&lt;p&gt;mantelhaen.test(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Mantel-Haenszel chi-squared test with continuity correction&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Mantel-Haenszel X-squared = 5.0497, df = 1, p-value = 0.02463&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true common odds ratio is not equal to 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0.6005522 0.9593077&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; common odds ratio &lt;/p&gt;
+&lt;p&gt;#&amp;gt;          0.759022&lt;/p&gt;
+&lt;p&gt;According to this test, there is a relationship between Allele and Habitat, controlling for Location, p=.025.&lt;/p&gt;
+&lt;p&gt;Note that the first two dimensions of the contingency table are treated the same (so their order can be swapped without affecting the test result), the highest-order dimension in the contingency table is different. This is illustrated below.&lt;/p&gt;
+&lt;h1 id=&quot;The-following-two-create-different-contingency-tables-but-have-the-same-result&quot;&gt;&lt;a href=&quot;#The-following-two-create-different-contingency-tables-but-have-the-same-result&quot; class=&quot;headerlink&quot; title=&quot;The following two create different contingency tables, but have the same result&quot;&gt;&lt;/a&gt;The following two create different contingency tables, but have the same result&lt;/h1&gt;&lt;h1 id=&quot;with-the-CMH-test&quot;&gt;&lt;a href=&quot;#with-the-CMH-test&quot; class=&quot;headerlink&quot; title=&quot;with the CMH test&quot;&gt;&lt;/a&gt;with the CMH test&lt;/h1&gt;&lt;p&gt;ct.1 &amp;lt;- xtabs(Count ~ Habitat + Allele + Location, data=fish)&lt;br&gt;ct.2 &amp;lt;- xtabs(Count ~ Allele + Habitat + Location, data=fish)&lt;br&gt;mantelhaen.test(ct.1)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Mantel-Haenszel chi-squared test with continuity correction&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct.1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Mantel-Haenszel X-squared = 5.0497, df = 1, p-value = 0.02463&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true common odds ratio is not equal to 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0.6005522 0.9593077&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; common odds ratio &lt;/p&gt;
+&lt;p&gt;#&amp;gt;          0.759022&lt;br&gt;mantelhaen.test(ct.2)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Mantel-Haenszel chi-squared test with continuity correction&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct.2&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Mantel-Haenszel X-squared = 5.0497, df = 1, p-value = 0.02463&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true common odds ratio is not equal to 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;  0.6005522 0.9593077&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; common odds ratio &lt;/p&gt;
+&lt;p&gt;#&amp;gt;          0.759022&lt;/p&gt;
+&lt;h1 id=&quot;With-Allele-last-we-get-a-different-result&quot;&gt;&lt;a href=&quot;#With-Allele-last-we-get-a-different-result&quot; class=&quot;headerlink&quot; title=&quot;With Allele last, we get a different result&quot;&gt;&lt;/a&gt;With Allele last, we get a different result&lt;/h1&gt;&lt;p&gt;ct.3 &amp;lt;- xtabs(Count ~ Location + Habitat + Allele, data=fish)&lt;br&gt;ct.4 &amp;lt;- xtabs(Count ~ Habitat + Location + Allele, data=fish)&lt;br&gt;mantelhaen.test(ct.3)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Cochran-Mantel-Haenszel test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct.3&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Cochran-Mantel-Haenszel M^2 = 168.4684, df = 3, p-value &amp;lt; 2.2e-16&lt;br&gt;mantelhaen.test(ct.4)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Cochran-Mantel-Haenszel test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct.4&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Cochran-Mantel-Haenszel M^2 = 168.4684, df = 3, p-value &amp;lt; 2.2e-16&lt;/p&gt;
+&lt;h1 id=&quot;With-Habitat-last-we-get-a-different-result&quot;&gt;&lt;a href=&quot;#With-Habitat-last-we-get-a-different-result&quot; class=&quot;headerlink&quot; title=&quot;With Habitat last, we get a different result&quot;&gt;&lt;/a&gt;With Habitat last, we get a different result&lt;/h1&gt;&lt;p&gt;ct.5 &amp;lt;- xtabs(Count ~ Allele + Location + Habitat, data=fish)&lt;br&gt;ct.6 &amp;lt;- xtabs(Count ~ Location + Allele + Habitat, data=fish)&lt;br&gt;mantelhaen.test(ct.5)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Cochran-Mantel-Haenszel test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct.5&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Cochran-Mantel-Haenszel M^2 = 2.0168, df = 3, p-value = 0.5689&lt;br&gt;mantelhaen.test(ct.6)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Cochran-Mantel-Haenszel test&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct.6&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Cochran-Mantel-Haenszel M^2 = 2.0168, df = 3, p-value = 0.5689&lt;/p&gt;
+&lt;p&gt;McNemar�s test&lt;/p&gt;
+&lt;p&gt;McNemar�s test is conceptually like a within-subjects test for frequency data. For example, suppose you want to test whether a treatment increases the probability that a person will respond �yes� to a question, and that you get just one pre-treatment and one post-treatment response per person. A standard chi-square test would be inappropriate, because it assumes that the groups are independent. Instead, McNemar�s test can be used. This test can only be used when there are two measurements of a dichotomous variable. The 2x2 contingency table used for McNemar�s test bears a superficial resemblance to those used for �normal� chi-square tests, but it is different in structure.&lt;/p&gt;
+&lt;p&gt;Suppose this is your data. Each subject has a pre-treatment and post-treatment response.&lt;/p&gt;
+&lt;p&gt;data &amp;lt;- read.table(header=TRUE, text=’&lt;br&gt; subject time result&lt;br&gt;       1  pre      0&lt;br&gt;       1 post      1&lt;br&gt;       2  pre      1&lt;br&gt;       2 post      1&lt;br&gt;       3  pre      0&lt;br&gt;       3 post      1&lt;br&gt;       4  pre      1&lt;br&gt;       4 post      0&lt;br&gt;       5  pre      1&lt;br&gt;       5 post      1&lt;br&gt;       6  pre      0&lt;br&gt;       6 post      1&lt;br&gt;       7  pre      0&lt;br&gt;       7 post      1&lt;br&gt;       8  pre      0&lt;br&gt;       8 post      1&lt;br&gt;       9  pre      0&lt;br&gt;       9 post      1&lt;br&gt;      10  pre      1&lt;br&gt;      10 post      1&lt;br&gt;      11  pre      0&lt;br&gt;      11 post      0&lt;br&gt;      12  pre      1&lt;br&gt;      12 post      1&lt;br&gt;      13  pre      0&lt;br&gt;      13 post      1&lt;br&gt;      14  pre      0&lt;br&gt;      14 post      0&lt;br&gt;      15  pre      0&lt;br&gt;      15 post      1&lt;br&gt;‘)&lt;/p&gt;
+&lt;p&gt;If your data is not already in wide format, it must be converted (see this page for more information):&lt;/p&gt;
+&lt;p&gt;library(tidyr)&lt;/p&gt;
+&lt;p&gt;data_wide &amp;lt;- spread(data, time, result)&lt;br&gt;data_wide&lt;/p&gt;
+&lt;p&gt;#&amp;gt;    subject post pre&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 1        1    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 2        2    1   1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 3        3    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 4        4    0   1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 5        5    1   1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 6        6    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 7        7    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 8        8    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 9        9    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 10      10    1   1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 11      11    0   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 12      12    1   1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 13      13    1   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 14      14    0   0&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 15      15    1   0&lt;/p&gt;
+&lt;p&gt;Next, generate the contingency table from just the pre and post columns from the data frame:&lt;/p&gt;
+&lt;p&gt;ct &amp;lt;- table( data_wide[,c(“pre”,”post”)] )&lt;br&gt;ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt;    post&lt;/p&gt;
+&lt;p&gt;#&amp;gt; pre 0 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   0 2 8&lt;/p&gt;
+&lt;p&gt;#&amp;gt;   1 1 4&lt;/p&gt;
+&lt;h1 id=&quot;The-contingency-table-above-puts-each-subject-into-one-of-four-cells-depending&quot;&gt;&lt;a href=&quot;#The-contingency-table-above-puts-each-subject-into-one-of-four-cells-depending&quot; class=&quot;headerlink&quot; title=&quot;The contingency table above puts each subject into one of four cells, depending&quot;&gt;&lt;/a&gt;The contingency table above puts each subject into one of four cells, depending&lt;/h1&gt;&lt;h1 id=&quot;on-their-pre-and-post-treatment-response-Note-that-it-it-is-different-from&quot;&gt;&lt;a href=&quot;#on-their-pre-and-post-treatment-response-Note-that-it-it-is-different-from&quot; class=&quot;headerlink&quot; title=&quot;on their pre- and post-treatment response. Note that it it is different from&quot;&gt;&lt;/a&gt;on their pre- and post-treatment response. Note that it it is different from&lt;/h1&gt;&lt;h1 id=&quot;the-contingency-table-used-for-a-“normal”-chi-square-test-shown-below-The-table&quot;&gt;&lt;a href=&quot;#the-contingency-table-used-for-a-“normal”-chi-square-test-shown-below-The-table&quot; class=&quot;headerlink&quot; title=&quot;the contingency table used for a “normal” chi-square test, shown below. The table&quot;&gt;&lt;/a&gt;the contingency table used for a “normal” chi-square test, shown below. The table&lt;/h1&gt;&lt;h1 id=&quot;below-does-not-account-for-repeated-measurements-and-so-it-is-not-useful-for&quot;&gt;&lt;a href=&quot;#below-does-not-account-for-repeated-measurements-and-so-it-is-not-useful-for&quot; class=&quot;headerlink&quot; title=&quot;below does not account for repeated measurements, and so it is not useful for&quot;&gt;&lt;/a&gt;below does not account for repeated measurements, and so it is not useful for&lt;/h1&gt;&lt;h1 id=&quot;the-purposes-here&quot;&gt;&lt;a href=&quot;#the-purposes-here&quot; class=&quot;headerlink&quot; title=&quot;the purposes here.&quot;&gt;&lt;/a&gt;the purposes here.&lt;/h1&gt;&lt;h1 id=&quot;table-data-c-“time”-”result”&quot;&gt;&lt;a href=&quot;#table-data-c-“time”-”result”&quot; class=&quot;headerlink&quot; title=&quot;table(data[,c(“time”,”result”)])&quot;&gt;&lt;/a&gt;table(data[,c(“time”,”result”)])&lt;/h1&gt;&lt;h1 id=&quot;result&quot;&gt;&lt;a href=&quot;#result&quot; class=&quot;headerlink&quot; title=&quot;result&quot;&gt;&lt;/a&gt;result&lt;/h1&gt;&lt;h1 id=&quot;time-0-1&quot;&gt;&lt;a href=&quot;#time-0-1&quot; class=&quot;headerlink&quot; title=&quot;time    0  1&quot;&gt;&lt;/a&gt;time    0  1&lt;/h1&gt;&lt;h1 id=&quot;post-3-12&quot;&gt;&lt;a href=&quot;#post-3-12&quot; class=&quot;headerlink&quot; title=&quot;post  3 12&quot;&gt;&lt;/a&gt;post  3 12&lt;/h1&gt;&lt;h1 id=&quot;pre-10-5&quot;&gt;&lt;a href=&quot;#pre-10-5&quot; class=&quot;headerlink&quot; title=&quot;pre  10  5&quot;&gt;&lt;/a&gt;pre  10  5&lt;/h1&gt;&lt;p&gt;After creating the appropriate contingency table, run the test:&lt;/p&gt;
+&lt;p&gt;mcnemar.test(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     McNemar’s Chi-squared test with continuity correction&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; McNemar’s chi-squared = 4, df = 1, p-value = 0.0455&lt;/p&gt;
+&lt;p&gt;For small sample sizes, it uses a continuity correction. Instead of using this correction, you can use an exact version of McNemar�s test, which is more accurate. It is available in the package exact2x2.&lt;/p&gt;
+&lt;p&gt;library(exact2x2)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Loading required package: exactci&lt;/p&gt;
+&lt;p&gt;#&amp;gt; Loading required package: ssanv&lt;br&gt;mcnemar.exact(ct)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt;     Exact McNemar test (with central confidence intervals)&lt;/p&gt;
+&lt;p&gt;#&amp;gt; &lt;/p&gt;
+&lt;p&gt;#&amp;gt; data:  ct&lt;/p&gt;
+&lt;p&gt;#&amp;gt; b = 8, c = 1, p-value = 0.03906&lt;/p&gt;
+&lt;p&gt;#&amp;gt; alternative hypothesis: true odds ratio is not equal to 1&lt;/p&gt;
+&lt;p&gt;#&amp;gt; 95 percent confidence interval:&lt;/p&gt;
+&lt;p&gt;#&amp;gt;    1.072554 354.981246&lt;/p&gt;
+&lt;p&gt;#&amp;gt; sample estimates:&lt;/p&gt;
+&lt;p&gt;#&amp;gt; odds ratio &lt;/p&gt;
+&lt;p&gt;#&amp;gt;          8&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;Solution
+    Tests of goodness-of-fit (exp
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Note for &#39;Analysis of Discrete Data&#39; (1)</title>
@@ -250,9 +601,9 @@
     
       <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
-      <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
-    
       <category term="Command Line" scheme="http://yoursite.com/tags/Command-Line/"/>
+    
+      <category term="Reference" scheme="http://yoursite.com/tags/Reference/"/>
     
   </entry>
   
