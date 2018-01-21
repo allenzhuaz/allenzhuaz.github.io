@@ -1,4 +1,3 @@
 # Personal Webpage:
 
-Here is the link: 
-allenzhuaz.github.io
+Click [**HERE**](allenzhuaz.github.io) to access my homepage.
